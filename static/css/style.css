@@ -1,0 +1,101 @@
+body {
+    background-image: url("https://flevix.com/wp-content/uploads/2020/01/Web-Header-Background-1.svg");
+    background-size: cover;
+}
+
+h1 {
+    color: white;
+}
+
+.data-info {
+    margin-left: 15px;
+    margin-top: 15px;
+    font-family: 'Concert One', cursive;
+    color: white;
+}
+
+.main_title {
+    font-family: 'Fredoka One', cursive;
+}
+
+.login {
+    margin-right: 20px;
+    margin-left: 15px;
+    color: dimgray;
+}
+
+.main {
+    margin-top: 40px;
+}
+
+.lookup{
+    margin-top: 40px;
+}
+
+.data {
+    margin-top: 40px;
+}
+.data_title {
+    font-family: 'Fredoka One', cursive;
+    margin-bottom: 40px;
+
+}
+.lookup_title {
+    font-family: 'Fredoka One', cursive;
+
+}
+
+.sub_title {
+    font-family: 'Fredoka One', cursive;
+}
+
+.title_main {
+    font-family: 'Fredoka One', cursive;
+}
+
+.login_input {
+    margin: 40px;
+}
+.btn-light {
+    margin-top: 40px;
+}
+
+.register_title {
+    font-family: 'Fredoka One', cursive;
+}
+
+.flash_register {
+    color: white;
+    margin-top: 10px;
+    font-family: 'Fredoka One', cursive;
+}
+
+.register_input {
+    margin-top: 40px;
+}
+
+.flash {
+    font-family: 'Fredoka One', cursive;
+    margin-top: 10px;
+}
+
+.btn {
+    width: 300px;
+}
+
+.body {
+    background-color: white;
+}
+.logout1 {
+    color: dimgray;
+    right: 40px;
+    top: 4%;
+}
+
+.logout {
+
+    margin-right: 20px;
+    color: dimgray;
+    right: 4%;
+    top: 4%;
+}

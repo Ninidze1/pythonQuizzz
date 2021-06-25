@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %} Login - {{super()}} {% endblock %}
+
+{% block content %}
+    <form class="register_input" method="post" style="width: 40%; margin-left: 30px">
+            {{super()}}
+        <h2 class="register_title">Register Page</h2>
+        <input type="text" class="form-control mt-4" placeholder="Username" name="username" >
+        <input type="password" class="form-control mt-4" placeholder="Password" name="password">
+        <input type="password" class="form-control mt-4" placeholder="Confirm Password" name="password_confirm">
+        {% for mesg in get_flashed_messages() %}
+            <p class="flash_register">{{ mesg }}</p>
+        {% endfor %}
+        <button type="submit" class="btn btn-light">Register</button>
+    </form>
+{%endblock%}

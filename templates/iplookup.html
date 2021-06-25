@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %} IPlookUp {% endblock %}
+
+{% block content %}
+    <form method="post" class="lookup" style="width: 40%; margin-left: 30px">
+            {{super()}}
+        <h2 class="lookup_title">lookup Page</h2>
+        <input type="text" class="form-control mt-4" placeholder="Ip Address" name="ip">
+            {% for mesg in get_flashed_messages() %}
+            <p>{{ mesg }}</p>
+            {% endfor %}
+        <button type="submit" class="btn btn-light">Find</button>
+
+    </form>
+{%endblock%}

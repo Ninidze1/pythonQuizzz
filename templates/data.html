@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %} Data {% endblock %}
+
+{% block content %}
+    <form class="data" method="post" style="width: 40%; margin-left: 30px">
+    <h2 class="data_title"> Data </h2>
+    {% for each in data %}
+        <p class="data-info"> {{ each }} : {{ data[each] }} </p>
+    {% endfor %}
+        <button type="submit" class="btn btn-light">Find on Map</button>
+    </form>
+{%endblock%}
