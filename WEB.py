@@ -1,5 +1,6 @@
 import ipaddress
 import json
+import hashlib
 
 import requests
 from flask import Flask, render_template, redirect, request, session, flash
@@ -53,8 +54,9 @@ def login():
     if request.method == "POST":
         username = request.form['loginusername']
         password = request.form['loginpassword']
+        encrypted_pass = hashlib.md5(password.encode()).hexdigest()
 
-        if (username in users.keys()) and (password in users.values()):
+        if (username in users.keys()) and (encrypted_pass in users.values()):
             session['username'] = username
             return redirect('iplookup')
         else:
@@ -72,12 +74,13 @@ def register():
     if request.method == "POST":
         username = request.form['username']
         password = request.form['password']
+        encrypted_pass = hashlib.md5(password.encode()).hexdigest()
 
         if username != "" and password != '':
             cursor.execute(f"SELECT count(*) FROM users WHERE USERNAME = '{username}'")
             count = cursor.fetchone()[0]
             if count == 0:
-                cursor.execute("INSERT INTO users (USERNAME, PASSWORD) VALUES (?,?)", (username, password))
+                cursor.execute("INSERT INTO users (USERNAME, PASSWORD) VALUES (?,?)", (username, encrypted_pass))
                 conn.commit()
                 session['username'] = username
                 return render_template('iplookup.html')
